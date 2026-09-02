@@ -1,0 +1,40 @@
+/* Estilos específicos de AdminSENA */
+
+/* Color verde institucional SENA */
+.bg-sena {
+  background-color: #39a900 !important;
+}
+
+.text-sena {
+  color: #39a900 !important;
+}
+
+.btn-sena {
+  background-color: #39a900;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-sena:hover {
+  background-color: #238200;
+  color: #ffffff;
+}
+
+/* Sombras y transiciones para tarjetas */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Transiciones para enlaces del menú */
+.navbar-nav .nav-link {
+  transition: opacity 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  opacity: 0.85;
+}

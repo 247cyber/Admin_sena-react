@@ -1,0 +1,21 @@
+/* Resets básicos y estilos globales */
+:root {
+  --sena-green: #39a900;
+  --sena-dark: #238200;
+  --sena-gray: #f8f9fa;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
