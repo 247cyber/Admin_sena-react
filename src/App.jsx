@@ -1,21 +1,23 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
+import Nosotros from './pages/Nosotros';
+import Login from './pages/Login';
+import Registro from './pages/Registro';
 import Home from './pages/Home';
+import AdminDashboard from './pages/admin/AdminDashboard'; 
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Layout principal con Navbar y Footer */}
+        
+        {/* Rutas Públicas (usan MainLayout con Navbar/Footer público) */}
         <Route path="/" element={<MainLayout />}>
-          
-          {/* Ruta principal (Inicio) */}
           <Route index element={<Home />} />
-
-          {/* Vistas generales */}
-          <Route path="nosotros" element={<div className="container py-5"><h2>Sección Nosotros</h2></div>} />
+          <Route path="nosotros" element={<Nosotros />} />
           <Route path="buscar" element={<div className="container py-5"><h2>Resultados de Búsqueda</h2></div>} />
-          <Route path="login" element={<div className="container py-5"><h2>Iniciar Sesión</h2></div>} />
+          <Route path="login" element={<Login />} />
+          <Route path="registro" element={<Registro />} />
 
           {/* Rutas para Crear (Módulo Registrar) */}
           <Route path="areas/crear" element={<div className="container py-5"><h2>Registrar Área</h2></div>} />
@@ -32,8 +34,11 @@ export default function App() {
           <Route path="cursos" element={<div className="container py-5"><h2>Lista de Cursos</h2></div>} />
           <Route path="instructores" element={<div className="container py-5"><h2>Lista de Instructores</h2></div>} />
           <Route path="aprendices" element={<div className="container py-5"><h2>Lista de Aprendices</h2></div>} />
-
         </Route>
+
+        {/* Ruta Independiente para el Panel de Administración (Sin MainLayout) */}
+        <Route path="/AdminDashboard" element={<AdminDashboard />} />
+
       </Routes>
     </BrowserRouter>
   );
